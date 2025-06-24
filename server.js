@@ -14,7 +14,7 @@ mongoose.connect(process.env.DB_URL)
     console.error('Database connection failed:', e.message);
   });
 
-app.use(cors({origin: ["http://localhost:3000","http://localhost:4000", 'https://backend-store-bkh1.onrender.com', 'https://watches-shop-rho.vercel.app/'],credentials: true}))
+app.use(cors({origin: ["http://localhost:3000","http://localhost:4000", 'https://backend-store-bkh1.onrender.com', 'https://watches-shop-rho.vercel.app'],credentials: true}))
 app.use(cookieParser())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
