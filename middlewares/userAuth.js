@@ -19,7 +19,7 @@ try{
 
     let {error} = userSchema.validate(req.body)
     if(error){
-        return res.status(400).json({message:`${error}`, auth: false})
+        return res.status(400).json({message: error, auth: false})
     }
     next()
 }catch(e){
