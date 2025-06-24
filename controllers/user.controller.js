@@ -52,7 +52,7 @@ const loginController = async (req, res) => {
       maxAge: 60 * 60 * 1000,
       httpOnly: true,
         secure: true,
-        samsite: true
+        sameSite: 'None'
     });
 
     return res.status(200).json({
